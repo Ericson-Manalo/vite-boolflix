@@ -5,7 +5,7 @@
 
     <MovieSearchFlix/>
 
-    <MovieList/>
+    <MovieList :movieList="movieList"/>
 </template>
 
 
@@ -19,7 +19,7 @@ export default {
     data() {
         return {
             movieList: [],
-            apiUrl: 'https://api.themoviedb.org/3/search/movie?api_key=b4e23a9ed230e66a8e63084cff9d0035&'
+            apiUrl: 'https://api.themoviedb.org/3/search/movie?api_key=b4e23a9ed230e66a8e63084cff9d0035&query='
         }
     },
     components:{
@@ -32,11 +32,11 @@ export default {
         searchFlix(needle = ''){
             axios.get(this.apiUrl,{
                 params:{
-                    name:needle
+                    name: needle
                 } 
             })
             .then ((response) =>{
-                this.movieList = response.data;
+                this.movieList = response.data.results;
                 console.log(this.movieList)
             })
         }
