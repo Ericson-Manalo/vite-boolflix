@@ -1,9 +1,9 @@
 <template>
-    <h1>
-        MainFlix
-    </h1>
-    <MovieSearchFlix @searched="searchFilm"/>
-    <MovieList/>
+    <main>
+        <MovieSearchFlix @searched="searchFilm"/>
+        <MovieList/>
+    </main>
+
 
 </template>
 
