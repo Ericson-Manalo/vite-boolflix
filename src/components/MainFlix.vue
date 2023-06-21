@@ -4,11 +4,13 @@
     </h1>
 
     <MovieSearchFlix/>
+
+    <MovieList/>
 </template>
 
 
 <script>
-
+import MovieList from './MoveList.vue'
 import MovieSearchFlix from './MovieSearchFlix.vue'
 import axios from 'axios'
 
@@ -20,7 +22,9 @@ export default {
         }
     },
     components:{
+        MovieList,
         MovieSearchFlix
+        
     }
 }
 </script>
