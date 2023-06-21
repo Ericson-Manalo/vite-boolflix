@@ -1,6 +1,6 @@
 <template lang="">
     <h1>
-        HeaderFlix
+        Boolflix
     </h1>
 </template>
 
