@@ -1,9 +1,11 @@
 <template lang="">
-    
+    <SingleMovie/>
 </template>
 
 
 <script>
+import SingleMovie from './SingleMovie.vue';
+
 export default {
     name :'MovieList',
     data() {
@@ -12,7 +14,7 @@ export default {
         }
     },
     components:{
-        
+        SingleMovie
     }
 }
 </script>
