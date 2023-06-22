@@ -14,10 +14,10 @@
                 Original language:
             </p>
 
-            <p v-if="!lang.includes(infos.original_language)"> 
+            <p v-if="!store.lang.includes(infos.original_language)"> 
                 {{ infos.original_language }}
             </p>
-            <img v-else :src="`/img/${infos.original_language}.png`" alt="">
+            <img v-else :src="`/img/${infos.original_language}.png`" alt="Logo Flag">
                 
 
         </div>
@@ -37,7 +37,6 @@ export default {
     data() {
         return {
             store,
-            lang: ['en', 'es', 'it', 'ja', 'fr']
         }
     },
 
@@ -60,7 +59,7 @@ export default {
 </script>
 <style lang="scss">
     img{
-        width: 20px;
-        height: 10px;
+        width: 30px;
+        height: 20px;
     }
 </style>
