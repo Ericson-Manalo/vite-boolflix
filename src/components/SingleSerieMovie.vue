@@ -1,10 +1,31 @@
 <template>
-    <h1>
-        {{ infos.original_name }}
-    </h1>
-    <h2>
-        {{infos.original_language}}
-    </h2>
+    <div>
+        <h1>
+            Title: 
+            {{ infos.name }}
+        </h1>
+
+        <p>
+            Original title:
+            {{ infos.original_name }}
+        </p>
+        <div class="d-flex">
+            <p>
+                Original language:
+            </p>
+
+            <p v-if="!store.lang.includes(infos.original_language)"> 
+                {{ infos.original_language }}
+            </p>
+            <img v-else :src="`/img/${infos.original_language}.png`" alt="Logo flag">
+                
+
+        </div>
+        <p>
+            {{ infos.vote_average }}
+        </p>
+        <hr>
+    </div>
 </template>
 
 
