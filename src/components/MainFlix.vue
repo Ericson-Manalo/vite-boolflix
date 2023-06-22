@@ -35,7 +35,6 @@ export default {
                 listMovie += `${store.searchMovie}`
                 console.log(listMovie)
 
-            store.searchMovie = "";
             }
 
             axios.get(listMovie)
@@ -50,6 +49,9 @@ export default {
             if(store.searchMovie !== ""){
                 listSeriesMovie += `${store.searchMovie}`
                 console.log(listSeriesMovie)
+
+                store.searchMovie = "";
+            
             }
 
             axios.get(listSeriesMovie)
