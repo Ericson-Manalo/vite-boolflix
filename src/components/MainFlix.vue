@@ -1,6 +1,7 @@
 <template>
     <main>
         <MovieSearchFlix @searched="searchFilm"/>
+
         <MovieList/>
     </main>
 
@@ -10,10 +11,9 @@
 
 <script>
 import {store} from '../store.js';
+import axios from 'axios';
 import MovieSearchFlix from './MovieSearchFlix.vue';
 import MovieList from './MovieList.vue';
-import axios from 'axios';
-
 
 export default {
     name:'MainFlix',
@@ -43,6 +43,21 @@ export default {
                     store.movieList = response.data.results;
                     console.log(store.movieList)
                 })
+            
+
+            let listSeriesMovie = store.apiSeriesUrl;
+
+            if(store.searchMovie !== ""){
+                listSeriesMovie += `${store.searchMovie}`
+                console.log(listSeriesMovie)
+            }
+
+            axios.get(listSeriesMovie)
+                .then(response =>{
+                    store.seriesList = response.data.results;
+                    console.log(store.seriesList)
+                })
+
 
 
         }
