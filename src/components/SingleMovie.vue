@@ -4,7 +4,7 @@
             Title: 
             {{ infos.title }}
         </h1>
-        <hr>
+
         <p>
             Original title:
             {{ infos.original_title }}
@@ -16,7 +16,7 @@
         <p>
             {{ infos.vote_average }}
         </p>
-
+        <hr>
     </div>
 
 </template>
@@ -34,9 +34,15 @@ export default {
     props:{
         infos : Object
     },
+    
     components:{
         
     },
+
+    methods:{
+
+    },
+
     created(){
     }
 }
