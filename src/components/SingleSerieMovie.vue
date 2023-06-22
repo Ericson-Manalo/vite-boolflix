@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="card">
-            <img :src="'https://image.tmdb.org/t/p/w342/' + infos.poster_path" alt="Image of the serie">
+            <img class="poster-img" :src="'https://image.tmdb.org/t/p/w342/' + infos.poster_path" alt="Image of the serie">
         </div>
         <h1>
             Title: 
