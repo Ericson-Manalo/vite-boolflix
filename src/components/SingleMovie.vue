@@ -14,32 +14,11 @@
                 Original language:
             </p>
 
-            <!--<span v-if="store.lang.includes(infos.original_language)">
-                <img :src="`../assets/images/flags/${infos.original_language}.png`" alt="">
-            </span>
-            <span v-else>
+            <p v-if="!lang.includes(infos.original_language)"> 
                 {{ infos.original_language }}
-            </span> -->
-
-            <!--da cambiare-->
-            <span v-if="infos.original_language == 'en'">
-                <img src="../assets/images/flags/en.png" alt="En flag">
-            </span>
-            <span v-if="infos.original_language == 'it'">
-                <img src="../assets/images/flags/it.png" alt="It flag">
-            </span>
-            <span v-if="infos.original_language == 'es'">
-                <img src="../assets/images/flags/es.png" alt="Es flag">
-            </span>
-            <span v-if="infos.original_language == 'ja'">
-                <img src="../assets/images/flags/ja.png" alt="Jp flag">
-            </span>
-            <span v-if="infos.original_language == 'fr'">
-                <img src="../assets/images/flags/fr.png" alt="Fr flag">
-            </span>
-            <span v-else>
-                {{ infos.original_language }}
-            </span>
+            </p>
+            <img v-else :src="`/img/${infos.original_language}.png`" alt="">
+                
 
         </div>
         <p>
@@ -57,7 +36,8 @@ export default {
     name :'SingleMovie',
     data() {
         return {
-            store
+            store,
+            lang: ['en', 'es', 'it', 'ja', 'fr']
         }
     },
 
