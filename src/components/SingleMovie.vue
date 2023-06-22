@@ -1,5 +1,8 @@
 <template>
     <div>
+        <div class="card">
+            <img class="poster-img" :src="'https://image.tmdb.org/t/p/w342/' + infos.poster_path" alt="Image of the serie">
+        </div>
         <h1>
             Title: 
             {{ infos.title }}
@@ -17,7 +20,7 @@
             <p v-if="!store.lang.includes(infos.original_language)"> 
                 {{ infos.original_language }}
             </p>
-            <img v-else :src="`/img/${infos.original_language}.png`" alt="Logo Flag">
+            <img class="logo-flag" v-else :src="`/img/${infos.original_language}.png`" alt="Logo Flag">
                 
 
         </div>
@@ -58,8 +61,6 @@ export default {
 }
 </script>
 <style lang="scss">
-    img{
-        width: 30px;
-        height: 20px;
-    }
+@use '../styles/general.scss' as*; 
+
 </style>
