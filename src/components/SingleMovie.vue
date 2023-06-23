@@ -24,9 +24,9 @@
                 
 
         </div>
-        <p>
-            {{ infos.vote_average }}
-        </p>
+        <i  v-for="star in 5" class="fa-regular fa-star"
+            :class="numToStar(infos.vote_avenger / 2)">
+        </i>
         <hr>
     </div>
 
@@ -52,7 +52,10 @@ export default {
     },
 
     methods:{
-
+        numToStar(num){
+            const star = (Math.floor(num));
+            return star; 
+        }
     },
 
 
@@ -63,4 +66,7 @@ export default {
 <style lang="scss">
 @use '../styles/general.scss' as*; 
 
+.fa-star{
+    color: rgb(255, 234, 0);
+}
 </style>
