@@ -4,22 +4,27 @@
             <img class="poster-img" :src="'https://image.tmdb.org/t/p/w342/' + infos.poster_path" alt="Image of the serie">
         </div>
         <div class="content">
-            <h1>
+            <h1 class="title-card">
                 Title: 
                 {{ infos.name }}
             </h1>
 
-            <p>
+            <hr>
+
+            <p class="original-title">
                 Original title:
                 {{ infos.original_name }}
             </p>
-            <div class="d-flex">
-                <p>
+            <p class="overview">
+                <em>{{ infos.overview }}</em>
+            </p>
+            <div class="lang">
+                <span>
                     Original language:
-                </p>
-                <p v-if="!store.lang.includes(infos.original_language)"> 
+                </span>
+                <span v-if="!store.lang.includes(infos.original_language)"> 
                     {{ infos.original_language }}
-                </p>
+                </span>
                 <img class="logo-flag" v-else :src="`/img/${infos.original_language}.png`" alt="Logo flag">
             </div>
         <p>

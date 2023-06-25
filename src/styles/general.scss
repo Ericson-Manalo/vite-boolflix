@@ -19,6 +19,10 @@ img.logo-flag{
     height: 20px;
 }
 
+div.content{
+    padding: 1.5rem;
+}
+
 article{
     position: relative;
     width: 320px;
@@ -53,4 +57,27 @@ div.card-image{
 div.card-image:hover .poster-img{
     transform: rotateY(-90deg);
     transition: all 1s ease-in-out 0s;
+}
+
+h1.title-card{
+    margin-bottom: 1rem;
+}
+
+hr{
+    margin-bottom: 1rem;
+}
+
+p.original-title{
+    font-weight: 200;
+    margin-bottom: 1rem;
+}
+
+p.overview{
+    font-size:x-small;
+    margin-bottom: 2rem;
+}
+
+div.lang{
+    display: flex;
+    align-items: center;
 }

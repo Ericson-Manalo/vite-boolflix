@@ -4,19 +4,26 @@
             <img class="poster-img" :src="'https://image.tmdb.org/t/p/w342/' + infos.poster_path" alt="Image of the serie">
         </div>
         <div class="content">
-            <h1>
-                Title: 
-                {{ infos.title }}
+            <h1 class="title-card">
+                <em>
+                    {{ infos.title }}
+                </em>
             </h1>
 
-            <p>
+            <hr>
+
+            <p class="original-title">
                 Original title:
                 {{ infos.original_title }}
             </p>
-            <div class="d-flex">
-                <p>
-                    Original language:
-                </p>
+
+            <p class="overview">
+                <em>{{ infos.overview }}</em>
+            </p>
+            <div class="lang">
+                <span>
+                    Original language:  
+                </span>
 
                 <p v-if="!store.lang.includes(infos.original_language)"> 
                     {{ infos.original_language }}
@@ -58,9 +65,13 @@ export default {
     }
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 @use '../styles/general.scss' as*; 
 
+
+p{
+    font-weight: 200;
+}
 .fa-star{
     color: grey;
 }
