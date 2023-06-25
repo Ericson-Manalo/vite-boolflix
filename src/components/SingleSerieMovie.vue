@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="card">
+        <div class="card-image">
             <img class="poster-img" :src="'https://image.tmdb.org/t/p/w342/' + infos.poster_path" alt="Image of the serie">
         </div>
         <h1>
@@ -25,7 +25,7 @@
 
         </div>
         <p>
-            {{ infos.vote_average }}
+            {{ infos.vote_average / 2}}
         </p>
         <hr>
     </div>

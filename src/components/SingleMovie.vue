@@ -1,34 +1,34 @@
 <template>
-    <div>
-        <div class="card">
+    <article>
+        <div class="card-image">
             <img class="poster-img" :src="'https://image.tmdb.org/t/p/w342/' + infos.poster_path" alt="Image of the serie">
         </div>
-        <h1>
-            Title: 
-            {{ infos.title }}
-        </h1>
+        <div class="content">
+            <h1>
+                Title: 
+                {{ infos.title }}
+            </h1>
 
-        <p>
-            Original title:
-            {{ infos.original_title }}
-        </p>
-        <div class="d-flex">
             <p>
-                Original language:
+                Original title:
+                {{ infos.original_title }}
             </p>
+            <div class="d-flex">
+                <p>
+                    Original language:
+                </p>
 
-            <p v-if="!store.lang.includes(infos.original_language)"> 
-                {{ infos.original_language }}
+                <p v-if="!store.lang.includes(infos.original_language)"> 
+                    {{ infos.original_language }}
+                </p>
+                <img class="logo-flag" v-else :src="`/img/${infos.original_language}.png`" alt="Logo Flag">
+            </div>
+
+            <p>
+                {{ infos.vote_average / 2 }}
             </p>
-            <img class="logo-flag" v-else :src="`/img/${infos.original_language}.png`" alt="Logo Flag">
-                
-
         </div>
-        <i  v-for="star in 5" class="fa-regular fa-star"
-            :class="numToStar(infos.vote_avenger / 2)">
-        </i>
-        <hr>
-    </div>
+    </article>
 
 </template>
 
@@ -48,14 +48,9 @@ export default {
     },
 
     components:{
-        
     },
 
     methods:{
-        numToStar(num){
-            const star = (Math.floor(num));
-            return star; 
-        }
     },
 
 
@@ -67,6 +62,7 @@ export default {
 @use '../styles/general.scss' as*; 
 
 .fa-star{
-    color: rgb(255, 234, 0);
+    color: grey;
 }
+
 </style>
