@@ -5,7 +5,7 @@
             <img src="/img/boolflix_logo.png" alt="Boolflix's logo">
         </div>
         <nav class="navbar">
-            <ul class="d-flex">
+            <ul class="settings">
                 <li>
                     Home
                 </li>
@@ -23,6 +23,17 @@
                 </li>
                 <li>
                     Browse by Languages
+                </li>
+            </ul>
+            <ul class="list-icon">
+                <li>
+                    <i class="fa-solid fa-bell"></i>
+                </li>
+                <li>
+                    <i class="fa-solid fa-user"></i>
+                </li>
+                <li>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
                 </li>
             </ul>
         </nav>
@@ -56,19 +67,28 @@ export default {
 
     div.logo{
         height: 100%;
+        margin-right: 2rem;
+        width: 15%;
     }
 
     nav{
         display: flex;
         height: 100%;
-        width: 45%;
+        width: 75%;
+        justify-content: space-between
     }
 
-    nav ul{
+    nav ul.settings{
         display: flex;
         align-items: center;
-        width: 100%;
+        width: 70%;
         justify-content: space-between;
+    }
 
+    nav ul.list-icon{
+        display: flex;
+        align-items: center;
+        width: 10%;
+        justify-content: space-between;
     }
 </style>
