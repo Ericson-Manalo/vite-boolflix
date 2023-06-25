@@ -1,8 +1,12 @@
 <template>
     <main>
-        <MovieSearchFlix @searched="searchFilm"/>
+        <div class="search-content">
+            <MovieSearchFlix @searched="searchFilm"/>
+        </div>
 
-        <MovieList/>
+        <div class="content-wrapper">
+            <MovieList/>
+        </div>
     </main>
 
 
@@ -70,5 +74,13 @@ export default {
 }
 </script>
 <style lang="scss">
-    
+    div.search-content{
+        margin-bottom: 2rem;
+    }
+
+    div.content-wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
 </style>

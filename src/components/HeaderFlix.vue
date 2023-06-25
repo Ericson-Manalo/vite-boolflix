@@ -1,7 +1,10 @@
 <template lang="">
-    <h1>
-        Boolflix
-    </h1>
+    <header>
+        <div class="logo">
+            <!--credits to Emanuela Pau-->
+            <img src="/img/boolflix_logo.png" alt="Boolflix's logo">
+        </div>
+    </header>
 </template>
 
 
@@ -18,6 +21,8 @@ export default {
     }
 }
 </script>
-<style lang="scss">
-    
+<style lang="scss" scoped>
+    header{
+        height: 100px;
+    }
 </style>

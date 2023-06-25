@@ -1,7 +1,11 @@
 <template>
-    <SingleMovie v-for="movie in store.movieList" :infos="movie"/>
 
-    <SingleSerieMovie v-for="serie in store.seriesList" :infos="serie"/>
+        <SingleMovie v-for="movie in store.movieList" :infos="movie"/>
+
+
+
+        <SingleSerieMovie v-for="serie in store.seriesList" :infos="serie"/>
+
 </template>
 
 
@@ -24,5 +28,5 @@ export default {
 }
 </script>
 <style lang="scss">
-    
+
 </style>

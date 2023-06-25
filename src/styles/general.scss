@@ -1,3 +1,7 @@
+body{
+    background-color: black;
+}
+
 img.logo-flag{
     width: 30px;
     height: 20px;
@@ -7,6 +11,7 @@ article{
     position: relative;
     width: 320px;
     height: 520px;
+    margin-left: 1rem;
 }
 
 img.poster-img{
@@ -35,5 +40,5 @@ div.card-image{
 
 div.card-image:hover .poster-img{
     transform: rotateY(-90deg);
-    transition: all 0.5s ease-in-out 0s;
+    transition: all 1s ease-in-out 0s;
 }
