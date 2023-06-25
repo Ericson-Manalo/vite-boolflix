@@ -27,9 +27,10 @@
                 </span>
                 <img class="logo-flag" v-else :src="`/img/${infos.original_language}.png`" alt="Logo flag">
             </div>
-        <p>
-            {{ infos.vote_average / 2}}
-        </p>
+            <p>
+                <i class="fa-solid fa-star yellow" v-for="star in dividedNum(infos.vote_average)"></i>
+                <i class="fa-solid fa-star grey" v-for="star in 5 - dividedNum(infos.vote_average)"></i>
+            </p>
         </div>
         
     </article>
@@ -48,6 +49,11 @@ export default {
     },
     components:{
 
+    },
+    methods: {
+        dividedNum(num){
+            return Math.ceil(num/2)
+        }
     },
     props:{
         infos: Object
